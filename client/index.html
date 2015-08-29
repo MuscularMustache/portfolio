@@ -5,10 +5,19 @@
     <title>Gabriel Parke Portfolio</title>
   </head>
   <body>
+    <div id="wrapper" ng-controller="resumeController">
       <h1>Greetings and Salutations Earth!</h1>
+      <h2>We are {{martians}}</h2>
+    </div>
 
-      <script type="text/javascript" src="../bower_components/jquery/dist/jquert.min.js"></script>
-      <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
-      <script type="text/javascript" src="../bower_components/ng-resource/dist/ng-resource.min.js"></script>
+    <!-- Dependencies -->
+    <script type="text/javascript" src="/bower/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower/ng-resource/dist/ng-resource.min.js"></script>
+    <!-- angular app -->
+    <script src="/app.js"></script>
+    <!-- controllers -->
+    <script src="/resume/resumeController.js"></script>
+
   </body>
 </html>
