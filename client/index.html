@@ -5,19 +5,29 @@
     <title>Gabriel Parke Portfolio</title>
   </head>
   <body>
-    <div id="wrapper" ng-controller="resumeController">
-      <h1>Greetings and Salutations Earth!</h1>
-      <h2>We are {{martians}}</h2>
+
+    <header>
+      <h1 class="logo">Gabriel Parke</h1>
+      <ul class="nav">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/resume">Resume</a></li>
+        <li><a href="#/projects">Projects</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <div class="content">
+      <div ng-view></div>
     </div>
 
     <!-- Dependencies -->
     <script type="text/javascript" src="/bower/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/bower/angular/angular.min.js"></script>
     <script type="text/javascript" src="/bower/ng-resource/dist/ng-resource.min.js"></script>
+    <script type="text/javascript" src="/bower/angular-route/angular-route.min.js"></script>
     <!-- angular app -->
     <script src="/app.js"></script>
     <!-- controllers -->
     <script src="/resume/resumeController.js"></script>
-
   </body>
 </html>

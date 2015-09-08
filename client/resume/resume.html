@@ -1,0 +1,9 @@
+<h1>resume</h1>
+
+<!-- order by is a filter, it is ordering by employer in alphabetical order -->
+<div class="employers" ng-repeat="job in jobs | orderBy:'employer'">
+  <h3>{{$index + 1}} {{job.employer}}</h3>
+  <p>{{job.title}}</p>
+  <p>{{job.desc}}</p>
+  <hr>
+</div>

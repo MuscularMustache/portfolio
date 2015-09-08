@@ -1,0 +1,17 @@
+[
+  {
+    "employer": "Pittsburgh Technical Institute (PTI)",
+    "title": "Digital Publishing",
+    "desc": "Print stuff"
+  },
+  {
+    "employer": "LarsonO'Brien",
+    "title": "Web Developer",
+    "desc": "Web Stuff"
+  },
+  {
+    "employer": "Branding Brand",
+    "title": "Software Developer",
+    "desc": "Mobile Web Stuff"
+  }
+]

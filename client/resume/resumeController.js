@@ -1,3 +1,9 @@
-app.controller('resumeController', ['$scope', '$resource', function($scope, $resource) {
-  $scope.martians = 'martians. Bum Ba Dum Ba Dum Dum Bum!';
+app.controller('resumeController', ['$scope', '$http', function($scope, $http) {
+
+  $http.get('data.json').success(function(data) {
+    $scope.jobs = data;
+  });
+
+  // $scope.orderProp = 'age';
+
 }]);
