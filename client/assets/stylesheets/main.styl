@@ -1,0 +1,330 @@
+$body-font     = "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$headline-font = "ostrich_sansblack", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$orange       = #F69408;
+$light-grey   = #B2B2B2;
+$med-grey     = #666666;
+$dark-grey    = #353535;
+
+h1, h2, h3, h4 {
+  font-family: $headline-font;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $med-grey;
+}
+
+h1 {
+  font-size: 58px;
+}
+
+header {
+  .main-nav {
+    padding: 0 15px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    li {
+      color: $med-grey;
+      display: block;
+      font-family: $body-font;
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
+  .logo {
+    display: block;
+    margin: 30px auto 20px;
+    width: 74px;
+  }
+}
+
+footer {
+  margin-top: 50px;
+  padding: 30px 15px;
+  width: 100%;
+  .social {
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    width: 135px;
+    li {
+      float: left;
+      width: 50px;
+      margin: 24px -8px 0 0;
+      &:nth-child(2) {
+        margin-top: 0;
+        margin-right: -50px
+      }
+      &:nth-child(3) {
+        margin-top: 48px;
+      }
+    }
+  }
+  .phone-number {
+    color: $med-grey;
+    display: block;
+    font-family: $headline-font;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+}
+
+
+#content-wrapper {
+  padding: 0 15px;
+  h2 {
+    font-size: 58px;
+    margin-top: 5px;
+  }
+  .subtitle {
+    color: $med-grey;
+    font-size: 18px;
+    line-height: 110%;
+    margin-top: 5px;
+    max-width: 288px
+    span {
+      color: $orange;
+    }
+  }
+}
+
+.text {
+  background: white url("../images/backgrounds/web-type.png") center;
+  background-size: 250px 116px;
+  height: 300px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  margin-top: -100px;
+}
+
+.hex {
+  position: relative;
+  width: 220px;
+  margin: 0 auto;
+  top: -3px;
+  left: 34px;
+  z-index: 1;
+  -ms-transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  transform: rotate(12deg);
+  img {
+    position: absolute
+    width: 110px;
+    &[src$="orange.png"] {
+      top: 45px;
+    }
+    &[src$="grey.png"] {
+      top: 0px;
+      left: 79px;
+    }
+    &[src$="darkgrey.png"] {
+      top: 90px;
+      left: 79px;
+    }
+  }
+  h3 {
+    color: white;
+    position: absolute
+    font-size: 18px;
+    letter-spacing: normal
+    top: 43px;
+    left: 106px;
+    z-index: 100;
+    &:first-of-type {
+      top: 87px;
+      left: 17px;
+    }
+    &:last-of-type {
+      top: 132px;
+      left: 96px;
+    }
+  }
+}
+
+
+.angle {
+  margin: 60px auto 20px;
+  max-width: 400px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    width: 200%;
+    height: 105%;
+    left: -50%;
+    margin-top: -15px;
+    position: absolute;
+    z-index: -1;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  &.right {
+    &::before {
+      -ms-transform: skew(12deg, -12deg);
+      -webkit-transform: skew(12deg, -12deg);
+      transform: skew(12deg, -12deg);
+    }
+    header {
+      text-align: right;
+    }
+  }
+  &.left {
+    &::before {
+      -ms-transform: skew(-12deg, 12deg);
+      -webkit-transform: skew(-12deg, 12deg);
+      transform: skew(-12deg, 12deg);
+    }
+  }
+
+  p {
+    font-family: $body-font;
+    font-size: 15px;
+    line-height: 130%;
+  }
+  &.orange {
+    &::before {
+      background: $orange;
+    }
+    h2 {
+      color: white;
+    }
+  }
+  &.light-grey {
+    &::before {
+      background: $light-grey;
+    }
+    h2 {
+      color: white;
+    }
+  }
+  &.med-grey {
+    &::before {
+      background: $med-grey;
+    }
+    .pretitle {
+      color: $orange;
+    }
+    h2, p {
+      color: white;
+    }
+  }
+  &.dark-grey {
+    &::before {
+      background: $dark-grey;
+    }
+    h2, p {
+      color: white;
+    }
+  }
+  &.white {
+    p {
+      background-color: white;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.white-bg {
+  height: 625px;
+  width: 100%;
+  position: absolute;
+  background-image: url("../images/backgrounds/syntax.png"), url("../images/backgrounds/html-wide.png");
+  background-position: center bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: 230px, 915px 537px;
+  margin-left: -15px;
+}
+
+.home {
+  h2 {
+    color: $orange;
+  }
+  .pretitle {
+    color: $med-grey;
+    font-size: 24px;
+  }
+
+  .light-grey {
+    margin-top: 70px;
+    &::before {
+      height: 130%;
+    }
+  }
+  .white {
+    margin-top: 210px;
+  }
+  .med-grey {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .white-bg {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .white-bg {
+    height: 610px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .white-bg {
+    height: 580px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .intro {
+    text-align: center;
+  }
+  .subtitle {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  header .logo {
+    margin: 30px auto -52px;
+  }
+  .main-nav {
+    li {
+      &:nth-child(2) {
+        a {
+          padding-right: 45px;
+        }
+      }
+      &:nth-child(3) {
+        a {
+          padding-left: 45px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+}

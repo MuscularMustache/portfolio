@@ -4,7 +4,7 @@ var express    = require('express'),
     bodyParser = require('body-parser');
 
 
-app.listen('4000', function() {
+app.listen('3000', function() {
   console.log('listening');
 });
 
@@ -14,4 +14,5 @@ app.get('/', function(req, res, next) {
 
 // serve static files to client
 app.use(express.static(__dirname + '/client'));
+app.use('/build', express.static(__dirname + '/build/assets'));
 app.use('/bower', express.static(__dirname + '/bower_components'));
