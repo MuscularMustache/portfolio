@@ -1,9 +1,17 @@
 <h1>resume</h1>
-
+<!-- controller isn't specified because it is specified in app.js -->
 <!-- order by is a filter, it is ordering by employer in alphabetical order -->
-<div class="employers" ng-repeat="job in jobs | orderBy:'employer'">
-  <h3>{{$index + 1}} {{job.employer}}</h3>
-  <p>{{job.position}}</p>
-  <p>{{job.description}}</p>
+<div class="employers" ng-repeat="employer in employers | orderBy:'name'">
+  <h3>{{$index + 1}} {{employer.name}}</h3>
+  <p>{{employer.position}}</p>
+  <p>{{employer.description}}</p>
+  <button ng-click="removeEmployer(employer)">Remove</button>
   <hr>
 </div>
+
+<form ng-submit="createEmployer()">
+  <input type="text" placeholder="Employer Name" ng-model="employer.name">
+  <input type="text" placeholder="Position" ng-model="employer.position">
+  <textarea placeholder="Description" ng-model="employer.description" rows="8" cols="40"></textarea>
+  <button type="submit">Add Employer</button>
+</form>

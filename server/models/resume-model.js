@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var resumeSchema = new Schema({
-  employer:  String,
+  name:  String,
   position: String,
+  date: { type: Date, default: Date.now },
   description: String
 });
 
@@ -11,6 +12,4 @@ var resumeSchema = new Schema({
 // thus, Employer will look for employers as my collection name
 var Employer = mongoose.model('Employer', resumeSchema);
 
-module.exports = {
-  employer: Employer
-};
+module.exports = Employer;

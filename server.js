@@ -2,10 +2,9 @@ var express    = require('express');
 var app        = express();
 var bodyParser = require('body-parser');
 var db         = require('./server/models/db'); // connects database
-var resume     = require('./server/models/resume-model');
 
 // use body parser middleware
-// app.use(bodyParser());
+app.use(bodyParser());
 
 app.listen('3000', function() {
   console.log('listening');
